@@ -1,0 +1,22 @@
+:root {
+  --color-dark: #2b2a28;
+  --color-purple: #2d2650;
+  --color-yellow: #dfdc01;
+  --color-grey: #999999;
+  --color--icons: #F5F5F5;
+
+  --container-width: 1110px;
+  --container-padding-x: 16px;
+  --section-padding-y: 70px;
+
+  --transition-duration: 0.2s;
+
+  --font-family-heading: 'Handjet', sans-serif;
+  --font-family-body: 'PT Sans', sans-serif;
+  --font-family-fancy: 'Press Start 2P', sans-serif;
+  --font-family-number: 'Eboy', sans-serif;
+
+  @include mobile {
+    --section-padding-y: 64px;
+  }
+}
