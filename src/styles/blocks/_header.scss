@@ -1,0 +1,24 @@
+.header {
+  position: relative;
+  padding-top: 40px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  &__logo,
+  &__button {
+    opacity: 0.2;
+
+    @include hover {
+      opacity: 1;
+    }
+  }
+}

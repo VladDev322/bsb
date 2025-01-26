@@ -198,8 +198,8 @@ svg * {
   --section-padding-y: 70px;
   --transition-duration: 0.2s;
   --font-family-heading: "Handjet", sans-serif;
-  --font-family-body: "PT Sans", sans-serif;
-  --font-family-fancy: "Press Start 2P", sans-serif;
+  --font-family-body: "PTSans", sans-serif;
+  --font-family-fancy: "PressStart2P", sans-serif;
   --font-family-number: "Eboy", sans-serif;
 }
 @media (width <= 767.98) {
@@ -260,4 +260,92 @@ a {
 }
 a, a:hover {
   text-decoration: none;
+}
+
+.header {
+  position: relative;
+  padding-top: 40px;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.header__button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.header__logo, .header__button {
+  opacity: 0.2;
+}
+@media (any-hover: hover) {
+  .header__logo:hover, .header__button:hover {
+    opacity: 1;
+  }
+}
+@media (any-hover: none) {
+  .header__logo:active, .header__button:active {
+    opacity: 1;
+  }
+}
+
+.gradient {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  max-height: 900px;
+  overflow: hidden;
+  background: center/cover no-repeat url(/src/images/background-gradient.png) #9283db;
+}
+
+.hero {
+  padding-top: 118px;
+}
+.hero__title {
+  display: flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-family: var(--font-family-fancy);
+  font-size: 40px;
+}
+.hero__title-name {
+  font-size: 80px;
+  position: relative;
+  letter-spacing: 3px;
+  text-shadow: 4px 4px 0 var(--color-purple), -4px 4px 0 var(--color-purple), -4px -4px 0 var(--color-purple), 4px -4px 0 var(--color-purple);
+}
+.hero__title-name::after {
+  content: "БСБ-";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  color: #fff;
+  background: none;
+  background-image: linear-gradient(17deg, var(--color-yellow) 47.6%, var(--color-purple) 48.62%);
+  text-shadow: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+.hero__title-feature {
+  margin-left: 20px;
+}
+.hero__description {
+  color: var(--color-purple);
+  margin-top: 60px;
+  font-size: 30px;
+  font-family: var(--font-family-heading);
+}
+
+.bigLogo {
+  position: absolute;
+  top: 300px;
+  right: 0;
+  -webkit-user-drag: none;
+  transform: translateX(50%);
+  background: url(/src/images/bigLogo.png);
 }/*# sourceMappingURL=style.css.map */

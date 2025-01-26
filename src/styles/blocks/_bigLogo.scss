@@ -1,0 +1,9 @@
+.bigLogo {
+  position: absolute;
+  top: 300px;
+  right: 0;
+  -webkit-user-drag: none;
+
+  transform: translateX(50%);
+  background: url(/src/images/bigLogo.png);
+}
