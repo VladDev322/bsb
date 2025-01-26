@@ -289,15 +289,11 @@ a, a:hover {
   }
 }
 
-.gradient {
-  position: absolute;
-  z-index: -1;
-  top: 0;
+.welcome {
   width: 100vw;
   height: 100vh;
   max-height: 900px;
-  overflow: hidden;
-  background: center/cover no-repeat url(/src/images/background-gradient.png) #9283db;
+  background: center/cover no-repeat url(/src/images/background-gradient.png) var(--color-purple);
 }
 
 .hero {
@@ -347,5 +343,5 @@ a, a:hover {
   right: 0;
   -webkit-user-drag: none;
   transform: translateX(50%);
-  background: url(/src/images/bigLogo.png);
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */
