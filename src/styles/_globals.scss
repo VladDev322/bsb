@@ -1,6 +1,6 @@
 body {
   @include fluid-text(18, 16);
-  overflow: hidden;
+  overflow-x: hidden;
 
   font-family: var(--font-family-body);
   font-weight: 400;

@@ -8,8 +8,9 @@
     font-family: var(--font-family-fancy);
 
     &-name {
-      font-size: 80px;
       position: relative;
+      white-space: nowrap;
+      font-size: 80px;
       letter-spacing: 3px;
       text-shadow: 4px 4px 0 var(--color-purple), -4px 4px 0 var(--color-purple),
         -4px -4px 0 var(--color-purple), 4px -4px 0 var(--color-purple);
@@ -49,6 +50,8 @@
     }
 
     &-stripe {
+      white-space: nowrap;
+
       @include mobile {
         display: none;
       }

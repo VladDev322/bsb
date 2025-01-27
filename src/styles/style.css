@@ -215,6 +215,10 @@ svg * {
   padding-inline: var(--container-padding-x);
 }
 
+.section {
+  padding-top: 80px;
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -223,8 +227,7 @@ svg * {
   border: 0 !important;
   padding: 0 !important;
   white-space: nowrap !important;
-  -webkit-clip-path: inset(100%) !important;
-          clip-path: inset(100%) !important;
+  clip-path: inset(100%) !important;
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
 }
@@ -243,7 +246,7 @@ svg * {
 
 body {
   font-size: clamp(16px, 1.25vw, 18px);
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: var(--font-family-body);
   font-weight: 400;
   color: var(--color-dark);
@@ -367,12 +370,12 @@ a, a:hover {
   padding-top: 40px;
 }
 .header__inner {
-  position: relative;
+  width: 100%;
+  position: fixed;
   z-index: 3;
   display: flex;
   justify-content: space-between;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
 }
 .header__button {
   cursor: pointer;
@@ -437,14 +440,13 @@ a, a:hover {
 .hero__title {
   display: flex;
   align-items: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   font-family: var(--font-family-fancy);
 }
 .hero__title-name {
-  font-size: 80px;
   position: relative;
+  white-space: nowrap;
+  font-size: 80px;
   letter-spacing: 3px;
   text-shadow: 4px 4px 0 var(--color-purple), -4px 4px 0 var(--color-purple), -4px -4px 0 var(--color-purple), 4px -4px 0 var(--color-purple);
 }
@@ -472,6 +474,9 @@ a, a:hover {
     background-image: linear-gradient(17deg, var(--color-yellow) 50%, var(--color-purple) 50%);
     text-shadow: none;
   }
+}
+.hero__title-stripe {
+  white-space: nowrap;
 }
 @media (max-width: 767px) {
   .hero__title-stripe {
@@ -531,8 +536,7 @@ a, a:hover {
   z-index: 3;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  -moz-column-gap: 109px;
-       column-gap: 109px;
+  column-gap: 109px;
   row-gap: 54px;
 }
 @media (max-width: 767px) {
@@ -646,6 +650,7 @@ a, a:hover {
   padding: 35px 54px;
   background: center/cover no-repeat url(/src/images/background-promo.png) #9283db;
   border: 3px solid rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -657,4 +662,81 @@ a, a:hover {
 .promo__button {
   width: 236px;
   align-self: flex-end;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.slogan {
+  padding-top: 100px;
+}
+.slogan__text {
+  padding-left: 32px;
+  border-left: 10px solid var(--color-purple);
+  max-width: 710px;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.slogan__text.is-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.steps__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.steps__step {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  row-gap: 24px;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.steps__step.is-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.steps__circle {
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--color-light);
+  font-size: 60px;
+  font-family: var(--font-family-heading);
+}
+.steps__circle--yellow {
+  background-color: #ffd700;
+}
+.steps__circle--blue {
+  background-color: #2e2e66;
+}
+.steps__circle--grey {
+  background-color: #f3f3f3;
+  color: var(--color-purple);
+}
+.steps__text {
+  text-align: start;
+}
+.steps__title {
+  font-family: var(--font-family-heading);
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 0.05em;
+}
+.steps__description {
+  padding-left: 18px;
+  font-size: 1rem;
+  color: #666;
+}
+
+/*# sourceMappingURL=style.css.map */
