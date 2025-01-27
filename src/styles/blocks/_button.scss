@@ -36,7 +36,6 @@
     }
   }
 
-  // Добавляем псевдоэлемент для фона, чтобы он не перекрывал текст
   &::after {
     content: "";
     position: absolute;
@@ -45,6 +44,6 @@
     right: 0;
     left: 0;
     background-color: var(--color-yellow);
-    z-index: -1; // Устанавливаем z-index для псевдоэлемента ниже
+    z-index: -1;
   }
 }
