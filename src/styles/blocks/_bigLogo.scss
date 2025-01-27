@@ -3,7 +3,9 @@
   top: 300px;
   right: 0;
   -webkit-user-drag: none;
-
-  transform: translateX(50%);
   background-repeat: no-repeat;
+
+  @include tablet {
+    display: none;
+  }
 }

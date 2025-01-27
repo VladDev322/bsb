@@ -3,14 +3,53 @@
   padding-top: 40px;
 
   &__inner {
+    position: relative;
+    z-index: 3;
     display: flex;
     justify-content: space-between;
+    column-gap: 20px;
   }
 
   &__button {
     cursor: pointer;
     background: none;
     border: none;
+
+    &.is-active {
+      rotate: 45deg;
+    }
+  }
+
+
+  &__input {
+    border: 2px solid rgba(245, 245, 245, 0.2);
+    border-radius: 7px;
+    padding: 20px 0px 20px 40px;
+    max-height: 46px;
+    width: max(66%, 200px);
+    background: linear-gradient(136deg, rgba(255, 255, 255, 0.4) 7.57%, rgba(255, 255, 255, 0.1) 56.52%);
+    outline: none;
+    background-image: url(/src/images/search-icon.svg); 
+    background-repeat: no-repeat;
+    background-position: 10px center;
+
+    @include mobile {
+      display: none;
+    }
+  
+    &:hover,
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  &__overlay,
+  &__input {
+    transition-duration: var(--transition-duration);
+    &:not(.is-active) {
+      @include hide;
+    }
   }
 
   &__logo,

@@ -1,0 +1,122 @@
+.overlay {
+  margin-top: 140px;
+  z-index: 2;
+  position: fixed;
+  inset: 0;
+
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: center / cover no-repeat
+    url(/src/images/background-menu-gray.png) #9283db;
+  }
+
+  @include mobile {
+    overflow-y: auto;
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 109px;
+    row-gap: 54px;
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 16px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 13px;
+    }
+  }
+
+  &__circle {
+    position: fixed;
+    bottom: -50%;
+    right: -50%;
+    width: 70vw;
+    aspect-ratio: 1;
+    background-image: url(/src/images/PixMenuDecorCircle.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform-origin: center;
+    animation: rotate 30s linear infinite;
+
+    @include tablet {
+      width: 90vw;
+    }
+
+    @include mobile {
+      top: 33%;
+      bottom: auto;
+    }
+
+    @include mobile-s {
+      display: none;
+    }
+
+    &--small {
+      width: 65vw;
+      animation: rotate 33s linear infinite;
+
+      @include tablet {
+        width: 79vw;
+      }
+
+      @include mobile {
+        top: 36%;
+      }
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  &__footer {
+    margin-top: 48px;
+    padding-bottom: 40px;
+    position: relative;
+    font-size: 30px;
+
+    &-info {
+      max-width: 568px;
+      margin-top: 48px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-column {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+    }
+
+    &-soc1als {
+      align-self: flex-end;
+    }
+
+    &-copyright {
+      font-size: 10px;
+      text-align: end;
+    }
+  }
+}

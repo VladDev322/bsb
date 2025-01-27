@@ -1,0 +1,25 @@
+.promo {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  position: relative;
+  max-width: 568px;
+  padding: 35px 54px;
+  background: center / cover no-repeat
+  url(/src/images/background-promo.png) #9283db;
+  border: 3px solid rgba(255, 255, 255, .4);
+  -webkit-box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, .1);
+  box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, .1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  &__description {
+    font-size: 18px;
+    color: var(--color-light);
+  }
+
+  &__button {
+    width: 236px;
+    align-self: flex-end;
+  }
+}

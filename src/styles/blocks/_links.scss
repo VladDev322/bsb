@@ -1,0 +1,48 @@
+.link {
+  color: var(--color-light);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  position: relative;
+  overflow: visible;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-light);
+    transition-duration: var(--transition-duration);
+  }
+  
+  @include hover {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &--accent {
+    display: inline;
+    font-family: var(--font-family-heading);
+    color: var(--color-purple);
+    font-size: 25px;
+    letter-spacing: 0.05em;
+
+    &::after {
+      color: var(--color-purple-light);
+      background-color: var(--color-yellow);
+    }
+  }
+}
+

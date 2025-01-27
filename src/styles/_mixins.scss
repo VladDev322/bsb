@@ -11,6 +11,16 @@
   }
 }
 
+@mixin hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin show {
+  opacity: 1;
+  visibility: visible;
+}
+
 @mixin reset-button {
   padding: 0;
   background-color: transparent;

@@ -1,9 +1,16 @@
 body {
   @include fluid-text(18, 16);
+  overflow: hidden;
 
   font-family: var(--font-family-body);
   font-weight: 400;
   color: var(--color-dark);
+}
+
+html {
+  &.is-lock {
+    overflow: hidden;
+  }
 }
 
 a,
