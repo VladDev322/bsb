@@ -20,6 +20,8 @@
   }
 
   &__menu {
+    position: relative;
+    z-index: 3;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 109px;
@@ -92,9 +94,10 @@
   }
 
   &__footer {
+    position: relative;
+    z-index: 3;
     margin-top: 48px;
     padding-bottom: 40px;
-    position: relative;
     font-size: 30px;
 
     &-info {
@@ -112,6 +115,12 @@
 
     &-soc1als {
       align-self: flex-end;
+    }
+
+    &-icon svg {
+      @include hover {
+        filter: drop-shadow(0 0 5px var(--color-light));
+      }
     }
 
     &-copyright {

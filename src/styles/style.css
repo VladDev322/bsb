@@ -527,6 +527,8 @@ a, a:hover {
   }
 }
 .overlay__menu {
+  position: relative;
+  z-index: 3;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   -moz-column-gap: 109px;
@@ -600,9 +602,10 @@ a, a:hover {
   }
 }
 .overlay__footer {
+  position: relative;
+  z-index: 3;
   margin-top: 48px;
   padding-bottom: 40px;
-  position: relative;
   font-size: 30px;
 }
 .overlay__footer-info {
@@ -618,6 +621,16 @@ a, a:hover {
 }
 .overlay__footer-soc1als {
   align-self: flex-end;
+}
+@media (hover: hover) {
+  .overlay__footer-icon svg:hover {
+    filter: drop-shadow(0 0 5px var(--color-light));
+  }
+}
+@media (hover: none) {
+  .overlay__footer-icon svg:active {
+    filter: drop-shadow(0 0 5px var(--color-light));
+  }
 }
 .overlay__footer-copyright {
   font-size: 10px;
