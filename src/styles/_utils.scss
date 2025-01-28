@@ -4,10 +4,6 @@
   padding-inline: var(--container-padding-x);
 }
 
-.section {
-  padding-top: 80px;
-}
-
 .visually-hidden {
   @include visually-hidden;
 }

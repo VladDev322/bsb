@@ -1,0 +1,13 @@
+.section {
+  margin-top: 80px;
+
+  &__title {
+    margin-bottom: 56px;
+    font-family: var(--font-family-heading);
+    font-weight: 900;
+    font-size: 30px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-grey-alt);
+  }
+}
