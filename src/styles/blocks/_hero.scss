@@ -1,6 +1,10 @@
 .hero {
   padding-top: 118px;
 
+  @include mobile {
+    padding-top: 72px;
+  }
+
   &__title {
     display: flex;
     align-items: center;
@@ -71,5 +75,10 @@
     margin-top: 60px;
     font-size: 30px;
     font-family: var(--font-family-heading);
+
+    @include mobile {
+      margin-top: 10px;
+      font-size: 18px;
+    }
   }
 }
