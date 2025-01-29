@@ -27,5 +27,8 @@ new CounterAnimation('#percent-4', 0, 100, 2500);
 initSwiper();
 
 // Init phone mask
-const phoneMask = new PhoneMask('#phone', '+7 (999) 999-99-99');
-phoneMask.applyMask();
+const phoneMaskOverlay = new PhoneMask('#phone-overlay', '+7 (999) 999-99-99');
+const phoneMaskFooter = new PhoneMask('#phone-footer', '+7 (999) 999-99-99');
+
+phoneMaskOverlay.applyMask();
+phoneMaskFooter.applyMask();
