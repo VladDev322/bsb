@@ -1,0 +1,12 @@
+.icon {
+  &--yellow {
+    @include hover {
+      filter: drop-shadow(0 0 5px var(--color-yellow));
+    }
+  }
+  &--purple {
+    @include hover {
+      filter: drop-shadow(0 0 5px var(--color-purple));
+    }
+  }
+}

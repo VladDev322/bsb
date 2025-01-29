@@ -117,12 +117,6 @@
       align-self: flex-end;
     }
 
-    &-icon svg {
-      @include hover {
-        filter: drop-shadow(0 0 5px var(--color-light));
-      }
-    }
-
     &-copyright {
       font-size: 10px;
       text-align: end;

@@ -13,9 +13,9 @@ export function initSwiper() {
 
     loop: true,
 
-    // autoplay: {
-    //   delay: 3000
-    // },
+    autoplay: {
+      delay: 3000
+    },
 
     breakpoints: {
       1920: {
