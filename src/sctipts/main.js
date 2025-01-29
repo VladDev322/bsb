@@ -1,4 +1,5 @@
 import HeaderMenu from './toggleMenu.js';
+import OverlayForm from './OverlayForm.js';
 import ActiveAnimation from './ActiveAnimation.js';
 import CounterAnimation from './CounterAnimation.js';
 import initSwiper from './swiperConfig';
@@ -6,6 +7,9 @@ import PhoneMask from './PhoneMask.js';
 
 // Header Overlay
 new HeaderMenu();
+
+// Form Overlay
+new OverlayForm();
 
 // Slogan Animation
 new ActiveAnimation('.slogan__text', 1000);

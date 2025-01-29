@@ -94,6 +94,34 @@
     }
   }
 
+  &__form {
+    display: none;
+    background-color: var(--color-grey-alt);
+
+    @include hover {
+
+    }
+
+    &.is-active {
+      display: flex;
+      animation: form-overlay 0.2s linear;
+    }
+  }
+
+  @keyframes form-overlay {
+    0% {
+      transform: scale(100%);
+    };
+
+    50% {
+      transform: scale(102%);
+    };
+
+    100% {
+      transform: scale(100%);
+    }
+  }
+
   &__footer {
     position: relative;
     z-index: 3;
@@ -122,5 +150,20 @@
       font-size: 10px;
       text-align: end;
     }
+  }
+}
+
+.form-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  backdrop-filter: blur(10px);
+
+  &.is-active {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
   }
 }
