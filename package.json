@@ -18,6 +18,7 @@
     "vite": "^6.0.5"
   },
   "dependencies": {
+    "inputmask": "^5.0.9",
     "swiper": "^11.2.1"
   }
 }

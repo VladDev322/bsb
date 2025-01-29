@@ -6,8 +6,8 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-export function initSwiper() {
-  const swiperParnters = new Swiper('.swiper-container-parnters', {
+export default function initSwiper() {
+  const swiperPartners = new Swiper('.swiper-container-partners', {
 
     modules: [Navigation, Autoplay],
 
@@ -78,5 +78,5 @@ export function initSwiper() {
     },
   });
 
-  return swiperParnters, swiperNews;
+  return swiperPartners, swiperNews;
 }
