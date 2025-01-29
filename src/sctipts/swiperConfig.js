@@ -49,6 +49,8 @@ export function initSwiper() {
 
     loop: true,
 
+    spaceBetween: 20,
+
     autoplay: {
       delay: 4000
     },

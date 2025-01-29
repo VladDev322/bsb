@@ -2,7 +2,6 @@
   color: var(--color-light);
   font-weight: 700;
   font-size: 18px;
-  letter-spacing: 0.05em;
   position: relative;
   overflow: visible;
 
@@ -36,7 +35,6 @@
     font-family: var(--font-family-heading);
     color: var(--color-purple);
     font-size: 25px;
-    letter-spacing: 0.05em;
 
     &::after {
       color: var(--color-purple-light);

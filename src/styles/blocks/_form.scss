@@ -1,0 +1,84 @@
+.form {
+  padding: 40px 55px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 36px;
+  border-radius: 7px;
+  box-shadow: 0 1px 24px -1px rgba(0, 0, 0, 0.1);
+
+  @include mobile {
+    row-gap: 12px;
+    padding: 24px 16px;
+    
+    .title {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    padding: 20px;
+    width: 100%;
+    height: 58px;
+    border-radius: 7px;
+    border: 2px solid var(--color-grey);
+    outline: none;
+    font-size: 14px;
+
+    &:focus {
+      border: 2px solid var(--color-yellow);
+    }
+  }
+
+  &__row-inputs {
+    display: flex;
+    column-gap: 36px;
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 12px;
+    }
+  }
+
+  &__textarea {
+    height: 202px;
+    resize: none;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 32px;
+    max-height: 41px;
+
+    @include mobile {
+      row-gap: 12px;
+      flex-direction: column;
+      max-height: none;
+    }
+  }
+
+  &__description {
+    max-width: 160px;
+    font-size: 10px;
+    color: var(--color-grey);
+    text-align: end;
+
+    @include mobile {
+      max-width: none;
+      align-self: flex-start;
+      text-align: start;
+    }
+  }
+
+  &__button {
+    width: 180px;
+
+    @include mobile {
+      align-self: flex-end;
+    }
+  }
+
+}

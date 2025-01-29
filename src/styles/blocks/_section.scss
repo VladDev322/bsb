@@ -6,8 +6,11 @@
     font-family: var(--font-family-heading);
     font-weight: 900;
     font-size: 30px;
-    letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--color-grey-alt);
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
   }
 }
