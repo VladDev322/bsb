@@ -1,5 +1,4 @@
 .partners {
-  position: relative;
   overflow-x: hidden;
 
   &__image {
@@ -17,12 +16,15 @@
   }
 }
 
+.swiper-container-parnters {
+  position: relative;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   color: var(--color-grey) !important;
   width: 27px !important;
   height: 51px !important;
-  transform: translateY(50px);
 
   &::after {
     visibility: hidden;
@@ -40,4 +42,3 @@
 .swiper-button-next {
   background: url(/src/images/slider-arrow-right.svg);
 }
-

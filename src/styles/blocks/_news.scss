@@ -1,0 +1,43 @@
+.news {
+  position: relative;
+  overflow: hidden;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 605px;
+    background: url(/src/images/NewsBG.svg);
+    background-size: contain;
+  }
+
+  &__block {
+    margin: 0 auto;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    height: 250px;
+    border-radius: 14px;
+    background: url(/src/images/newsPhoto.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-light);
+    letter-spacing: 0.05em;
+  }
+
+  &__info {
+    max-width: 280px;
+  }
+
+  &__title {
+    font-family: var(--font-family-heading);
+    font-size: 20px;
+
+  }
+
+  &__description {
+    font-size: 14px;
+  }
+}
