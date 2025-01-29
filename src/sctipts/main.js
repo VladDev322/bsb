@@ -1,13 +1,19 @@
 import HeaderMenu from './toggleMenu.js';
-import Animation from './Animation.js';
+import ActiveAnimation from './ActiveAnimation.js';
+import CounterAnimation from './CounterAnimation.js';
 
 // Header Overlay
 new HeaderMenu();
 
 // Slogan Animation
-new Animation('.slogan__text', 1000);
+new ActiveAnimation('.slogan__text', 1000);
 
 // Steps Animation
-new Animation('.steps__step', 1000);
+new ActiveAnimation('.steps__step', 1000);
 
 
+// Percents Animation
+new CounterAnimation('#percent-1', 15, 95, 2500);
+new CounterAnimation('#percent-2', 10, 87, 2500);
+new CounterAnimation('#percent-3', 2, 96, 2500);
+new CounterAnimation('#percent-4', 0, 100, 2500);

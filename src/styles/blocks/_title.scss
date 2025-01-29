@@ -1,0 +1,13 @@
+.title {
+  color: var(--color-purle);
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 0.05em;
+  user-select: none;
+  transition-duration: var(--transition-duration);
+ 
+  @include hover {
+    color: var(--color-purple-light);
+  }
+}

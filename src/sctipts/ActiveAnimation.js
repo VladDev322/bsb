@@ -1,4 +1,4 @@
-export default class Animation {
+export default class ActiveAnimation {
   constructor(selector, delay = 500) {
     this.elements = document.querySelectorAll(selector);
     this.delay = delay;
