@@ -1,6 +1,7 @@
 import HeaderMenu from './toggleMenu.js';
 import ActiveAnimation from './ActiveAnimation.js';
 import CounterAnimation from './CounterAnimation.js';
+import { initSwiper } from './swiperConfig';
 
 // Header Overlay
 new HeaderMenu();
@@ -17,3 +18,5 @@ new CounterAnimation('#percent-1', 15, 95, 2500);
 new CounterAnimation('#percent-2', 10, 87, 2500);
 new CounterAnimation('#percent-3', 2, 96, 2500);
 new CounterAnimation('#percent-4', 0, 100, 2500);
+
+initSwiper();

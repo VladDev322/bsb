@@ -39,7 +39,7 @@
 
   &__image {
     grid-area: image;
-
+    -webkit-user-drag: none;
     @include mobile {
       height: 95px;
       width: 95px;

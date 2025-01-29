@@ -1042,6 +1042,7 @@ a, a:hover {
 }
 .advantages__image {
   grid-area: image;
+  -webkit-user-drag: none;
 }
 @media (max-width: 767px) {
   .advantages__image {
@@ -1065,4 +1066,55 @@ a, a:hover {
 .advantages__button {
   grid-area: button;
   width: 195px;
+}
+
+.partners {
+  position: relative;
+  overflow-x: hidden;
+}
+.partners__image {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  filter: grayscale(100%);
+  transition-duration: var(--transition-duration);
+}
+@media (hover: hover) {
+  .partners__image:hover {
+    filter: grayscale(0%);
+  }
+}
+@media (hover: none) {
+  .partners__image:active {
+    filter: grayscale(0%);
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--color-grey) !important;
+  width: 27px !important;
+  height: 51px !important;
+  transform: translateY(50px);
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  visibility: hidden;
+}
+@media (max-width: 767px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+
+.swiper-button-prev {
+  background: url(/src/images/slider-arrow-left.svg);
+}
+
+.swiper-button-next {
+  background: url(/src/images/slider-arrow-right.svg);
 }/*# sourceMappingURL=style.css.map */
