@@ -25,9 +25,13 @@
 
   &__data {
     font-family: var(--font-family-number);
-    font-size: 140px;
     letter-spacing: 0.05em;
     color: var(--color-yellow);
+    font-size: 140px;
+
+    @include mobile {
+      font-size: 80px;
+    }
   }
 
   &__title {
@@ -35,6 +39,7 @@
     left: 34px;
     bottom: 10px;
     padding: 6px 32px;
+    font-size: 25px;
     backdrop-filter: blur(20px);
     box-shadow: 0 1px 24px -1px rgba(0, 0, 0, 0.1);
     background: linear-gradient(
@@ -44,6 +49,10 @@
     );
     border-radius: 7px;
     white-space: nowrap;
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 }
 
