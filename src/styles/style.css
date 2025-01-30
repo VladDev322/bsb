@@ -432,6 +432,9 @@ a, a:hover {
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
+.header__inner.is-active {
+  display: none;
+}
 .header__button {
   cursor: pointer;
   background: none;
@@ -1296,7 +1299,7 @@ a, a:hover {
 }
 .footer__wrapper {
   position: relative;
-  padding-top: 250px;
+  padding-top: 300px;
   padding-bottom: 42px;
   display: flex;
   align-items: flex-start;
