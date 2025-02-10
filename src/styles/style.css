@@ -716,6 +716,7 @@ a, a:hover {
   row-gap: 13px;
 }
 .overlay__circle {
+  z-index: 3;
   position: fixed;
   bottom: -50%;
   right: -50%;
